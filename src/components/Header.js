@@ -6,7 +6,6 @@ import {
     NavbarToggler,
     Nav,
     NavItem,
-    Container
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import PlayaLogo from '../app/assets/img/playa-logo.png';
