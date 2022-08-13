@@ -1,13 +1,12 @@
 import { Button } from "../../ButtonElements";
+import { BtnWrap } from "../InfoElements";
 import { useState } from "react";
 import {
     Modal,
     ModalHeader,
     ModalBody,
     FormGroup,
-    Label,
     Col,
-    Button
 } from 'reactstrap';
 import { Formik, Field, Form, } from 'formik';
 
@@ -16,7 +15,7 @@ const JobAppForm = ({ buttonLabel }) => {
 
     return (
         <>
-            <Button onClick={() => setJobModalOpen(true)}>{buttonLabel}</Button>
+            <Button onClick={() => setJobModalOpen(true)}>Apply Here</Button>
             <Modal isOpen={jobModalOpen}>
                 <ModalHeader toggle={() => setJobModalOpen(false)}>Job Application</ModalHeader>
                 <ModalBody>
@@ -45,6 +44,28 @@ const JobAppForm = ({ buttonLabel }) => {
                                         className='form-control'
                                     />
                                 </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col xs='6'>
+                                    <Field
+                                        name='phoneNum'
+                                        placeholder='Phone'
+                                        className='form-control'
+                                    />
+                                </Col>
+                                <Col xs='6'>
+                                    <Field
+                                        name='email'
+                                        placeholder='Email'
+                                        type='email'
+                                        className='form-control'
+                                    />
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                               <BtnWrap>
+                                    <Button>Submit</Button>
+                                </BtnWrap>
                             </FormGroup>
                         </Form>
                     </Formik>

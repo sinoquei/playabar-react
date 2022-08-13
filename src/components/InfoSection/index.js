@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ButtonElements';
+import JobAppForm from './JobApp/JobAppForm';
 import { 
     InfoContainer, 
     InfoWrapper, 
@@ -54,7 +55,7 @@ const InfoSection = ({
                                 </Subtitle>
                                 <TopLine>Careers</TopLine>
                                 <BtnWrap>
-                                    <Button to='home'
+                                    <JobAppForm to='home'
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -64,8 +65,7 @@ const InfoSection = ({
                                     dark={dark ? 1 : 0}
                                     dark2={dark2 ? 1 : 0}
                                     >
-                                        {buttonLabel}
-                                    </Button>
+                                    </JobAppForm>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
